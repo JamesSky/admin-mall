@@ -1,0 +1,8 @@
+{
+  "name": "admin-mall",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JamesSky/admin-mall.git",
+  "author": "JamesSky <1511877674@qq.com>",
+  "license": "MIT"
+}

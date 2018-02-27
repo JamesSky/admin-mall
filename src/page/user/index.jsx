@@ -45,7 +45,6 @@ class UserList extends React.Component{
         let listMap = this.state.list.map((user, index) => {
             return (
                 <tr key={index}>
-                    
                     <td>{user.id}</td>
                     <td>{user.username}</td>
                     <td>{user.email}</td>

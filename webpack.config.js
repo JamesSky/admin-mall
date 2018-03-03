@@ -2,12 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin   = require("extract-text-webpack-plugin");
 const path               = require('path');
 const webpack           = require('webpack');
-
+// 环境变量, dev, (test), online
+var WEBPACK_ENV         = process.env.WEBPACK_ENV || 'dev';
 module.exports = {
 	entry: './src/app.jsx',
 	output: {
 		path: path.resolve(__dirname, './dist'),
-		publicPath: '/dist/',
+		publicPath: WEBPACK_ENV === 'online' ? '//s.happymmall.com/admin-fe-v2/dist/' : '/dist/',
 		filename: 'js/app.js'
 	},
 	resolve: {

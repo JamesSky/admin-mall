@@ -33,12 +33,15 @@ class Mutil{
         let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         let queryString = window.location.search.split('?')[1] || '';
         let result = queryString.match( reg );
-        console.log(result);
         return result ? encodeURIComponent(result[2]) : null;
     }
-    // alert
-    errorTips(msg){
-        alert(msg || '哪里不对了~');
+    // alert成功
+    successTips(sussessMsg){
+        alert(sussessMsg || '操作成功~');
+    }
+    // alert错误
+    errorTips(errorMsg){
+        alert(errorMsg || '哪里不对了~');
     }
     // 向本地存储里放数据
     setStorage(name, data){
@@ -52,7 +55,7 @@ class Mutil{
             winLocation.setItem(name, string);
         // undefined/function    
         } else {
-            console.log('该数据类型不能用于本地存储');
+            alert('该数据类型不能用于本地存储');
         }
     }
     // 从本地存储获取数据

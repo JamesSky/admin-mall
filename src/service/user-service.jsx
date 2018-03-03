@@ -18,9 +18,6 @@ class User{
             $.trim( loginInfo.username ),
             $.trim( loginInfo.password )
         ];
-
-        console.log(typeof username, password)
-
         if( typeof username !== 'string' || username.length === 0 ){
             return {
                 status: false,

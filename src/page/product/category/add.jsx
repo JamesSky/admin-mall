@@ -60,7 +60,7 @@ class CategoryAdd extends React.Component{
                                     <select className="form-control cate-select" name="parentId" onChange={(e) => this.onValueChange(e)}>
                                         <option value="0">/所有</option>
                                         {
-                                            this.state.categoryList.map(function(category, index) {
+                                            this.state.categoryList.map((category, index) => {
                                                 return (
                                                     <option value={category.id} key={index}>/所有/{category.name}</option>
                                                 );
